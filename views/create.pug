@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1 Add Employee
+  form(method='POST', action='/employee/add')
+    #form-group
+      label First Name:
+      input.form-control(name='firstName', type='text')
+    #form-group
+      label Last Name:
+      input.form-control(name='lastName', type='text')
+    #form-group
+      label Email:
+      input.form-control(name='email', type='email')
+      br
+    input.btn.btn-primary(type='submit', value='Submit')
+

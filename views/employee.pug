@@ -1,0 +1,32 @@
+extends layout 
+
+block content
+  h1 Employees
+  table.table(class=type)
+    thead
+      tr
+        th Image
+        th ID
+        th First Name
+        th Last Name
+        th Email
+        th Age
+        th Contact Number
+        th Date of Birth
+        th Address
+        th Details
+    tbody
+      each employee in employees
+        tr
+          td 
+            img(src=employee.imageUrl)
+          td= employee.id
+          td= employee.firstName
+          td= employee.lastName
+          td= employee.email
+          td= employee.age
+          td= employee.contactNumber
+          td= employee.dob
+          td= employee.address
+          td 
+            a.btn.btn-info(href="/employee/"+employee._id)= "Details"

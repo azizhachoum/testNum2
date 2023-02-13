@@ -1,0 +1,14 @@
+extends layout 
+
+block content
+    h1 Employee Name: #{employees.firstName}
+    br
+    h4  lastName : #{employees.lastName}
+    h4  Email : #{employees.email}
+    h4  Age : #{employees.age}
+    h4  Contact Number : #{employees.contactNumber}
+    h4  Date de naissance : #{employees.dob}
+    h4  Address : #{employees.address}
+    hr
+    a.btn.btn-warning(href='/employee/edit/' + employees._id) Edit
+    a.btn.btn-danger.delete-employee(href='#', data-id = employees._id) Delete

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Edit Employee
+  form(method='POST', action='/employee/edit/'+ employees._id)
+    #form-group
+      label First Name:
+      input.form-control(name='firstName', type='text', value = employees.firstName)
+    #form-group
+      label Last Name:
+      input.form-control(name='lastName', type='text', value = employees.lastName)
+    #form-group
+      label Email:
+      input.form-control(name='email', type='email', value = employees.email)
+      br
+    input.btn.btn-primary(type='submit', value='Submit')
